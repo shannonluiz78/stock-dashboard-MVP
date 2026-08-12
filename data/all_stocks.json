@@ -1,26 +1,28 @@
 {
-    "scanDate": "2026-08-11",
+    "scanDate": "2026-08-13",
     "stocks": [
         {
             "rank": 1,
             "ticker": "NVDA",
             "name": "NVIDIA Corporation",
-            "price": 128.50,
-            "targetPrice": 155.00,
-            "entryZone": "122.00 - 126.00",
-            "cutLoss": 115.00,
+            "price": 223.94,
+            "targetPrice": 265.00,
+            "entryZone": "215.00 - 221.00",
+            "cutLoss": 205.00,
             "riskRewardRatio": "2.4 : 1",
             "score": 94,
             "rsi": 58.4,
-            "peRatio": 42.5,
+            "peRatio": 45.2,
             "roe": 54.2,
             "profitMargin": 48.8,
             "debtEquity": 0.12,
-            "marketCap": "$3.15T",
-            "thesis": "NVIDIA demonstrates elite fundamental momentum driven by accelerated data center AI chip adoption. Technical indicators show healthy digestion of recent gains with RSI neutral at 58.4 and a strong support shelf near $122.",
+            "marketCap": "$5.48T",
+            "intrinsicValue": 260.00,
+            "economicMoat": "Wide",
+            "thesis": "NVIDIA demonstrates elite fundamental momentum driven by accelerated data center AI chip adoption and dominant CUDA ecosystem lock-in. Technical indicators show healthy digestion of recent gains.",
             "history": {
                 "labels": ["Aug '25", "Sep", "Oct", "Nov", "Dec", "Jan '26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
-                "prices": [110, 115, 108, 120, 125, 130, 122, 128, 135, 124, 126, 121, 128.5]
+                "prices": [180, 192, 175, 195, 205, 215, 200, 210, 225, 210, 218, 212, 223.94]
             }
         },
         {
@@ -28,7 +30,7 @@
             "ticker": "MSFT",
             "name": "Microsoft Corporation",
             "price": 445.20,
-            "targetPrice": 500.00,
+            "targetPrice": 510.00,
             "entryZone": "435.00 - 442.00",
             "cutLoss": 420.00,
             "riskRewardRatio": "2.2 : 1",
@@ -39,7 +41,9 @@
             "profitMargin": 36.4,
             "debtEquity": 0.35,
             "marketCap": "$3.32T",
-            "thesis": "Exceptional cash flow generation paired with enterprise cloud dominance (Azure) and enterprise AI integration. Low volatility profile with solid risk-adjusted upside toward the $500 milestone.",
+            "intrinsicValue": 490.00,
+            "economicMoat": "Wide",
+            "thesis": "Exceptional cash flow generation paired with enterprise cloud dominance (Azure) and sticky software ecosystems. Low volatility profile with solid risk-adjusted upside.",
             "history": {
                 "labels": ["Aug '25", "Sep", "Oct", "Nov", "Dec", "Jan '26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
                 "prices": [410, 420, 415, 430, 440, 435, 442, 450, 448, 438, 440, 442, 445.2]
@@ -50,7 +54,7 @@
             "ticker": "AAPL",
             "name": "Apple Inc.",
             "price": 224.30,
-            "targetPrice": 250.00,
+            "targetPrice": 255.00,
             "entryZone": "218.00 - 222.00",
             "cutLoss": 210.00,
             "riskRewardRatio": "2.1 : 1",
@@ -61,7 +65,9 @@
             "profitMargin": 26.5,
             "debtEquity": 1.45,
             "marketCap": "$3.42T",
-            "thesis": "Strong share buybacks and robust consumer ecosystem stability provide high downside protection. RSI is approaching upper thresholds, suggesting a modest pullback to the $218 entry zone offers an ideal risk entry.",
+            "intrinsicValue": 240.00,
+            "economicMoat": "Wide",
+            "thesis": "Strong share buybacks and robust consumer hardware/services ecosystem stability provide high downside protection and steady compounding.",
             "history": {
                 "labels": ["Aug '25", "Sep", "Oct", "Nov", "Dec", "Jan '26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
                 "prices": [212, 218, 215, 220, 225, 222, 219, 224, 228, 221, 220, 222, 224.3]
@@ -72,7 +78,7 @@
             "ticker": "GOOGL",
             "name": "Alphabet Inc.",
             "price": 178.90,
-            "targetPrice": 205.00,
+            "targetPrice": 210.00,
             "entryZone": "172.00 - 176.00",
             "cutLoss": 165.00,
             "riskRewardRatio": "2.0 : 1",
@@ -83,7 +89,9 @@
             "profitMargin": 27.8,
             "debtEquity": 0.11,
             "marketCap": "$2.21T",
-            "thesis": "Attractive valuation relative to big tech peers with strong digital ad growth and cloud monetization momentum. Technical structure is coiled for a breakout above $182 resistance.",
+            "intrinsicValue": 195.00,
+            "economicMoat": "Wide",
+            "thesis": "Attractive valuation relative to big tech peers with strong digital advertising cash flows and cloud infrastructure monetization momentum.",
             "history": {
                 "labels": ["Aug '25", "Sep", "Oct", "Nov", "Dec", "Jan '26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
                 "prices": [165, 170, 168, 172, 175, 178, 174, 176, 180, 175, 172, 176, 178.9]
@@ -94,7 +102,7 @@
             "ticker": "AMZN",
             "name": "Amazon.com, Inc.",
             "price": 186.40,
-            "targetPrice": 215.00,
+            "targetPrice": 220.00,
             "entryZone": "180.00 - 184.00",
             "cutLoss": 172.00,
             "riskRewardRatio": "2.2 : 1",
@@ -105,7 +113,9 @@
             "profitMargin": 8.2,
             "debtEquity": 0.52,
             "marketCap": "$1.94T",
-            "thesis": "AWS margin expansion and retail operational efficiency gains are driving accelerating free cash flow conversion. RSI at 49.5 indicates a neutral springboard condition.",
+            "intrinsicValue": 205.00,
+            "economicMoat": "Wide",
+            "thesis": "AWS cloud margin expansion and e-commerce operational efficiency gains are driving accelerating free cash flow conversion.",
             "history": {
                 "labels": ["Aug '25", "Sep", "Oct", "Nov", "Dec", "Jan '26", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"],
                 "prices": [175, 180, 178, 182, 188, 185, 182, 188, 192, 184, 181, 183, 186.4]
