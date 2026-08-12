@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Detail | AURA Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">&larr; Back to Dashboard</a>
+
+        <div class="detail-header">
+            <div class="detail-title">
+                <h1 id="stock-ticker">---</h1>
+                <p id="stock-name">Loading company details...</p>
+            </div>
+            <div class="detail-price-box">
+                <div class="detail-price" id="stock-price">$0.00</div>
+                <div style="font-size: 13px; color: #666;" id="stock-score-label">Score: --/100</div>
+            </div>
+        </div>
+
+        <div class="detail-grid">
+            <!-- Left Column: Chart & AI Summary -->
+            <div>
+                <div class="card">
+                    <h2>Price Performance & Technicals</h2>
+                    <div class="timeframe-buttons">
+                        <button class="tf-btn" data-tf="1m">1M</button>
+                        <button class="tf-btn" data-tf="3m">3M</button>
+                        <button class="tf-btn" data-tf="6m">6M</button>
+                        <button class="tf-btn active" data-tf="1y">1Y</button>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="priceChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>AI Investment Thesis & Summary</h2>
+                    <p id="stock-thesis" style="font-size: 14px; color: #333; line-height: 1.6;">Loading AI synthesis...</p>
+                    <div class="ai-summary">
+                        <strong>Decision Support Notice:</strong> Recommendations are calculated using a quantitative weighting of fundamental quality and technical momentum. Not guaranteed financial advice.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Metrics, Valuation & Trade Setup -->
+            <div>
+                <div class="card">
+                    <h2>Trade Setup</h2>
+                    <div class="metrics-list" style="display: block;">
+                        <div class="metric-item" style="margin-bottom: 12px;">
+                            <div class="metric-label">Recommended Entry Zone</div>
+                            <div class="metric-value" id="setup-entry" style="font-size: 16px;">$0.00</div>
+                        </div>
+                        <div class="metric-item" style="margin-bottom: 12px;">
+                            <div class="metric-label">Target Price</div>
+                            <div class="metric-value" id="setup-target" style="font-size: 16px;">$0.00</div>
+                        </div>
+                        <div class="metric-item" style="margin-bottom: 12px;">
+                            <div class="metric-label">Cut-Loss / Risk Level</div>
+                            <div class="metric-value" id="setup-cutloss" style="font-size: 16px;">$0.00</div>
+                        </div>
+                        <div class="metric-item" style="margin-bottom: 12px;">
+                            <div class="metric-label">Risk / Reward Ratio</div>
+                            <div class="metric-value" id="setup-rr" style="font-size: 16px;">1 : 0.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Fundamentals</h2>
+                    <div class="metrics-list" id="fundamentals-list">
+                        <!-- Populated by stock.js -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="stock.js"></script>
+</body>
+</html>
