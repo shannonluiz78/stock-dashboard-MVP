@@ -3,7 +3,7 @@ let currentStockData = null;
 
 document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const ticker = urlParams.get('ticker') || 'AAPL';
+    const ticker = urlParams.get('ticker') || 'NVDA';
 
     try {
         const response = await fetch('data/all_stocks.json');
@@ -47,6 +47,8 @@ function populateDetailView(stock) {
 
     const fundList = document.getElementById('fundamentals-list');
     fundList.innerHTML = `
+        <div class="metric-item"><div class="metric-label">Intrinsic Value</div><div class="metric-value" style="color: #000; font-weight:700;">$${stock.intrinsicValue}</div></div>
+        <div class="metric-item"><div class="metric-label">Economic Moat</div><div class="metric-value">${stock.economicMoat}</div></div>
         <div class="metric-item"><div class="metric-label">P/E Ratio</div><div class="metric-value">${stock.peRatio}</div></div>
         <div class="metric-item"><div class="metric-label">ROE</div><div class="metric-value">${stock.roe}%</div></div>
         <div class="metric-item"><div class="metric-label">Profit Margin</div><div class="metric-value">${stock.profitMargin}%</div></div>
@@ -59,20 +61,25 @@ function populateDetailView(stock) {
 function initChart(stock, timeframe) {
     const ctx = document.getElementById('priceChart').getContext('2d');
     
-    // Slice mock historical data based on timeframe
-    let labels = stock.history.labels;
-    let prices = stock.history.prices;
+    let labels = [...stock.history.labels];
+    let prices = [...stock.history.prices];
+    const totalPoints = labels.length;
 
+    // Accurate timeframe slicing based on monthly historical data points
     if (timeframe === '1m') {
-        labels = labels.slice(-4);
-        prices = prices.slice(-4);
+        // Last 2 points (latest month-over-month movement)
+        labels = labels.slice(Math.max(0, totalPoints - 2));
+        prices = prices.slice(Math.max(0, totalPoints - 2));
     } else if (timeframe === '3m') {
-        labels = labels.slice(-12);
-        prices = prices.slice(-12);
+        // Last 4 points (approx 3 months)
+        labels = labels.slice(Math.max(0, totalPoints - 4));
+        prices = prices.slice(Math.max(0, totalPoints - 4));
     } else if (timeframe === '6m') {
-        labels = labels.slice(-26);
-        prices = prices.slice(-26);
+        // Last 7 points (approx 6 months)
+        labels = labels.slice(Math.max(0, totalPoints - 7));
+        prices = prices.slice(Math.max(0, totalPoints - 7));
     }
+    // '1y' defaults to full 13 points
 
     if (priceChart) {
         priceChart.destroy();
@@ -87,7 +94,7 @@ function initChart(stock, timeframe) {
                 data: prices,
                 borderColor: '#000000',
                 borderWidth: 2,
-                pointRadius: 2,
+                pointRadius: 3,
                 tension: 0.1,
                 fill: false
             }]
