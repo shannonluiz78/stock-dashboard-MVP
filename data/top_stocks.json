@@ -3,55 +3,60 @@
         "rank": 1,
         "ticker": "NVDA",
         "name": "NVIDIA Corporation",
-        "price": 128.50,
-        "targetPrice": 155.00,
-        "entryZone": "122.00 - 126.00",
+        "price": 223.94,
+        "targetPrice": 265.00,
+        "entryZone": "215.00 - 221.00",
         "score": 94,
         "rsi": 58.4,
-        "macd": "Bullish Crossover"
+        "intrinsicValue": 260.00,
+        "economicMoat": "Wide"
     },
     {
         "rank": 2,
         "ticker": "MSFT",
         "name": "Microsoft Corporation",
         "price": 445.20,
-        "targetPrice": 500.00,
+        "targetPrice": 510.00,
         "entryZone": "435.00 - 442.00",
         "score": 91,
         "rsi": 54.1,
-        "macd": "Neutral / Stable"
+        "intrinsicValue": 490.00,
+        "economicMoat": "Wide"
     },
     {
         "rank": 3,
         "ticker": "AAPL",
         "name": "Apple Inc.",
         "price": 224.30,
-        "targetPrice": 250.00,
+        "targetPrice": 255.00,
         "entryZone": "218.00 - 222.00",
         "score": 88,
         "rsi": 61.2,
-        "macd": "Bullish"
+        "intrinsicValue": 240.00,
+        "economicMoat": "Wide"
     },
     {
         "rank": 4,
         "ticker": "GOOGL",
         "name": "Alphabet Inc.",
         "price": 178.90,
-        "targetPrice": 205.00,
+        "targetPrice": 210.00,
         "entryZone": "172.00 - 176.00",
         "score": 86,
         "rsi": 52.8,
-        "macd": "Bullish"
+        "intrinsicValue": 195.00,
+        "economicMoat": "Wide"
     },
     {
         "rank": 5,
         "ticker": "AMZN",
         "name": "Amazon.com, Inc.",
         "price": 186.40,
-        "targetPrice": 215.00,
+        "targetPrice": 220.00,
         "entryZone": "180.00 - 184.00",
         "score": 85,
         "rsi": 49.5,
-        "macd": "Consolidating"
+        "intrinsicValue": 205.00,
+        "economicMoat": "Wide"
     }
 ]
