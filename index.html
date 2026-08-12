@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | AI Stock Intelligence Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <h1>AURA Intelligence</h1>
+                <p>Quantitative S&P 500 & Nasdaq 100 Scanner</p>
+            </div>
+            <div class="header-actions">
+                <div class="scan-meta">
+                    <div>Last Scan: <span id="scan-date">Loading...</span></div>
+                    <div style="font-size: 11px; color: #666;">Status: Automated Weekly</div>
+                </div>
+                <button class="btn-primary" id="run-scan-btn">Run Scan Now</button>
+            </div>
+        </header>
+
+        <section>
+            <h2>Top 5 High-Conviction Shortlist</h2>
+            <div class="top-grid" id="top-stocks-container">
+                <!-- Populated by app.js -->
+            </div>
+        </section>
+
+        <section>
+            <h2>All Scanned Universe</h2>
+            <div class="search-filter-bar">
+                <input type="text" id="search-input" placeholder="Search by ticker or company name (e.g. AAPL, Apple)...">
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Ticker</th>
+                            <th>Company</th>
+                            <th>Price</th>
+                            <th>Score</th>
+                            <th>RSI</th>
+                            <th>Entry Zone</th>
+                            <th>Target</th>
+                        </tr>
+                    </thead>
+                    <tbody id="all-stocks-tbody">
+                        <!-- Populated by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
